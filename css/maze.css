@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;600;700&display=swap");
+
+:root {
+  color-scheme: light;
+  --bg-start: #f4f1de;
+  --bg-end: #e1f0e7;
+  --card: #fef9f2;
+  --ink: #1f2937;
+  --muted: #6b7280;
+  --accent: #2a9d8f;
+  --accent-2: #f4a261;
+  --shadow: 0 18px 40px rgba(31, 41, 55, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, var(--bg-start), var(--bg-end));
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.5rem;
+}
+
+.maze-shell {
+  width: min(900px, 96vw);
+}
+
+.maze-card {
+  background: var(--card);
+  border-radius: 24px;
+  padding: 2.2rem 2.4rem 2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(31, 41, 55, 0.08);
+}
+
+.maze-header h1 {
+  font-family: "Bebas Neue", "Space Grotesk", sans-serif;
+  font-size: clamp(2.6rem, 6vw, 3.6rem);
+  letter-spacing: 1px;
+  margin-top: 0.4rem;
+}
+
+.maze-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18rem;
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.maze-subtitle {
+  margin-top: 0.6rem;
+  color: var(--muted);
+  max-width: 520px;
+}
+
+.maze-stage {
+  margin-top: 1.8rem;
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+}
+
+#mazeCanvas {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(31, 41, 55, 0.1);
+}
+
+.maze-legend {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.legend-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+}
+
+.legend-swatch.start {
+  background: var(--accent);
+}
+
+.legend-swatch.goal {
+  background: var(--accent-2);
+}
+
+.legend-swatch.wall {
+  background: #1f2937;
+}
+
+.maze-actions {
+  margin-top: 1.6rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.maze-controls {
+  margin-top: 1.4rem;
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+}
+
+.control-row {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.control-btn {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  border: 1px solid rgba(31, 41, 55, 0.12);
+  background: #fff;
+  color: var(--ink);
+  font-size: 1.2rem;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  touch-action: manipulation;
+}
+
+.control-btn:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.btn {
+  border: none;
+  background: var(--accent);
+  color: #f8fafc;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(31, 41, 55, 0.2);
+  color: var(--ink);
+}
+
+.maze-hint {
+  margin-top: 1.2rem;
+  color: var(--muted);
+}
+
+.maze-status {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .maze-card {
+    padding: 1.8rem 1.6rem 1.6rem;
+  }
+
+  .maze-hint {
+    text-align: center;
+  }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic meta tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Saisa — Search-style personal portfolio" />
+  <meta name="keywords" content="Saisa, portfolio, developer, search" />
+  <meta name="author" content="Saisa Koirala" />
+  <title>Saisa</title>
+  <link rel="icon" href="assets/avatar.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Theme Toggle (top-right) -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" aria-pressed="false">
+    <span class="toggle-track">
+      <span class="toggle-thumb"></span>
+    </span>
+    <span class="toggle-icon" aria-hidden="true">☀️</span>
+  </button>
+
+  <main class="search-page">
+    <!-- Search UI -->
+    <section class="search-shell" aria-label="Search">
+      <h1 class="brand-title">Saisa</h1>
+      <p class="brand-tagline">Search to know more about me</p>
+
+      <div class="search-area">
+        <div class="search-box" role="search">
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Search about me..."
+            autocomplete="off"
+            aria-label="Search Saisa"
+          />
+          <button class="search-btn" id="searchBtn" aria-label="Search">
+            🔍
+          </button>
+        </div>
+
+        <!-- Suggestions dropdown -->
+        <ul class="suggestions" id="suggestions" role="listbox" aria-label="Search suggestions">
+          <!-- Filled dynamically by JavaScript -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- Popup window (tabbed) -->
+    <div class="modal" id="modal" aria-hidden="true">
+      <div class="modal-window" role="dialog" aria-modal="true">
+        <div class="modal-header">
+          <ul class="tabs-list" id="tabsList" aria-label="Open tabs">
+            <!-- Tabs injected by JavaScript -->
+          </ul>
+          <div class="tab-actions">
+            <button class="btn-minimize" id="minimizeBtn" aria-label="Minimize">—</button>
+          </div>
+        </div>
+        <div class="modal-content" id="modalContent">
+          <!-- Dynamic content injected here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Minimized tabs dock -->
+    <div class="tabs-dock" id="tabsDock" aria-hidden="true">
+      <ul class="tabs-dock-list" id="tabsDockList" aria-label="Minimized tabs"></ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Saisa Koirala. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

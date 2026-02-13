@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic meta tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Saisa Koirala" />
+  <meta name="keywords" content="Saisa Koirala, contact, email" />
+  <meta name="author" content="Saisa Koirala" />
+  <title>Saisa | Contact</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Header / Navbar (consistent across pages) -->
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="logo" href="index.html">Saisa</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" data-nav>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>Contact</h1>
+        <p class="lead">Let’s connect! Fill out the form below or email me directly.</p>
+
+        <div class="contact-grid">
+          <form id="contact-form" class="card" action="#">
+            <!-- Update action to your form handler if needed -->
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Your message"></textarea>
+            </div>
+
+            <p id="form-error" class="form-error"></p>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+
+          <div class="card">
+            <h3>Quick Contact</h3>
+            <p class="muted">Prefer email? Click below:</p>
+            <a class="btn btn-outline" href="mailto:saisa@example.com">saisa@example.com</a>
+            <!-- Replace email with your real address -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Saisa Koirala. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

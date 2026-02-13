@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Saisa Maze Challenge" />
+  <title>Saisa | Maze</title>
+  <link rel="stylesheet" href="css/maze.css" />
+</head>
+<body>
+  <main class="maze-shell">
+    <div class="maze-card">
+      <header class="maze-header">
+        <p class="maze-eyebrow">Shh, you are asking too much</p>
+        <h1>Maze Gate</h1>
+        <p class="maze-subtitle" id="mazeSubtitle">Solve the maze to get back to search.</p>
+      </header>
+
+      <div class="maze-stage">
+        <canvas id="mazeCanvas" width="480" height="360" aria-label="Maze"></canvas>
+        <div class="maze-legend">
+          <div><span class="legend-swatch start"></span> Start</div>
+          <div><span class="legend-swatch goal"></span> Goal</div>
+          <div><span class="legend-swatch wall"></span> Wall</div>
+        </div>
+      </div>
+
+      <div class="maze-actions">
+        <button class="btn" id="resetBtn" type="button">Restart maze</button>
+        <a class="btn btn-outline" href="index.html">Back to search</a>
+      </div>
+
+      <div class="maze-controls" aria-label="Touch controls">
+        <button class="control-btn" data-move="up" aria-label="Move up">▲</button>
+        <div class="control-row">
+          <button class="control-btn" data-move="left" aria-label="Move left">◀</button>
+          <button class="control-btn" data-move="down" aria-label="Move down">▼</button>
+          <button class="control-btn" data-move="right" aria-label="Move right">▶</button>
+        </div>
+      </div>
+
+      <p class="maze-hint">Use arrow keys or WASD.</p>
+      <p class="maze-status" id="mazeStatus" aria-live="polite"></p>
+    </div>
+  </main>
+
+  <script src="js/maze.js"></script>
+</body>
+</html>
